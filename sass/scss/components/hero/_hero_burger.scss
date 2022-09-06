@@ -9,6 +9,12 @@
   border: 0.1rem solid $color-lite;
   cursor: pointer;
 
+  @include tabletLandscape {
+    & {
+      right: 3%;
+    }
+  }
+
   @include desktop {
     & {
       display: none;
