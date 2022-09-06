@@ -1,0 +1,75 @@
+.hero-content-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+
+  .hero-content-info {
+    width: 100%;
+    height: 70%;
+    @include flex-center-col;
+
+    .hero-content-info-names {
+      width: 100%;
+      max-width: 40rem;
+      height: 70%;
+      max-height: 37rem;
+      position: relative;
+      border: 1px solid blue;
+
+      .hero-content-info-names-title {
+        width: 100%;
+        padding: 0 1rem;
+        @include absol-center;
+        font-size: 9rem;
+        font-family: $secondary-font;
+        @include flex-center-col;
+        align-items: flex-start;
+        z-index: 2;
+        border: 1px solid green;
+
+        .hero-content-title-first {
+          margin-bottom: -4rem;
+        }
+      }
+
+      .hero-content-info-names-subtitle {
+        width: 100%;
+        padding: 0 1rem;
+        position: absolute;
+        top: 13.5%;
+        left: 30%;
+        color: $color-gray;
+        font-size: 9rem;
+        font-family: $secondary-font;
+        letter-spacing: 0.7rem;
+        @include flex-center-col;
+        align-items: flex-start;
+
+        .hero-content-subtitle-first {
+          font-size: 5rem;
+          margin-bottom: -3rem;
+        }
+
+        .hero-content-subtitle-last {
+          -webkit-text-stroke: 0.25rem $color-gray;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .hero-content-info-btn {
+      width: 100%;
+      @include flex-center;
+    }
+  }
+
+  .hero-content-scroll {
+    width: 100%;
+    height: 20%;
+    @include flex-center;
+  }
+}

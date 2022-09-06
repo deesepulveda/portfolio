@@ -1,0 +1,63 @@
+.hero-burger {
+  width: 6rem;
+  height: 5rem;
+  position: fixed;
+  top: 2%;
+  right: 5%;
+  z-index: 100;
+  @include flex-center;
+  border: 0.1rem solid $color-lite;
+  cursor: pointer;
+
+  @include desktop {
+    & {
+      display: none;
+    }
+  }
+
+  .hero-burger-box {
+    width: 3.3rem;
+    height: 100%;
+    position: relative;
+
+    .top-line,
+    .bottom-line {
+      height: 0.2rem;
+      position: absolute;
+      right: 0;
+      background-color: $color-lite;
+      @include transit4;
+    }
+
+    .top-line {
+      width: 1.7rem;
+      top: 40%;
+    }
+
+    .bottom-line {
+      width: 3.3rem;
+      top: 60%;
+    }
+
+    .rotateTop {
+      width: 3.3rem;
+      top: 50%;
+      @include transformY;
+      transform: rotate(-225deg);
+      -webkit-transform: rotate(-225deg);
+      -moz-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+      -o-transform: rotate(-225deg);
+    }
+
+    .rotateBottom {
+      top: 50%;
+      @include transformY;
+      transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+    }
+  }
+}
