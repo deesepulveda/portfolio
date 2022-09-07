@@ -106,7 +106,7 @@ body {
 @media only screen and (min-width: 2560px) {
   .hero-header {
     max-width: 180rem;
-    height: 20rem;
+    height: 16rem;
   }
 }
 .hero-header .hero-nav {
@@ -338,8 +338,8 @@ body {
   width: 100%;
   padding: 0 1rem;
   position: absolute;
-  top: 12%;
-  left: 30%;
+  top: 11%;
+  left: 28%;
   color: #262525;
   font-size: 10rem;
   font-family: "Bebas Neue", cursive;
@@ -365,7 +365,7 @@ body {
 }
 .hero-content-container .hero-content-info .hero-content-info-names .hero-content-info-names-subtitle .hero-content-subtitle-first {
   font-size: 5.5rem;
-  margin-bottom: -4rem;
+  margin-bottom: -3rem;
 }
 .hero-content-container .hero-content-info .hero-content-info-names .hero-content-info-names-subtitle .hero-content-subtitle-last {
   -webkit-text-stroke: 0.25rem #262525;
