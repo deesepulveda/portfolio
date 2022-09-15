@@ -1,8 +1,14 @@
 .button-box {
-  width: 21.5rem;
+  width: 20rem;
   height: 5rem;
   border: 0.1rem solid $color-lite;
   @include flex-center;
+  @include transit4;
+  overflow: hidden;
+
+  &:hover {
+    background-color: $color-lite;
+  }
 
   .buttons {
     @include keep-it-hundo;
@@ -12,9 +18,9 @@
     color: $color-lite;
     font-size: 1.6rem;
     letter-spacing: 0.3rem;
+    @include text-shadowgray;
 
     &:hover {
-      background-color: $color-lite;
       color: $color-dark;
     }
   }

@@ -1,0 +1,5 @@
+.projects-container {
+  @include keep-it-hundo;
+  position: relative;
+  border: 1px solid red;
+}

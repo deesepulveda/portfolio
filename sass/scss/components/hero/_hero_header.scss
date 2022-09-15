@@ -34,7 +34,7 @@
     height: 100vh;
     @include absol-topLeftZero;
     @include transit4;
-    background-color: #262525c7;
+    background-color: #1a1919e5;
     transform: translateY(-100vh);
     -webkit-transform: translateY(-100vh);
     -moz-transform: translateY(-100vh);
@@ -63,6 +63,12 @@
           flex-direction: row;
           justify-content: flex-end;
           margin-right: 5rem;
+        }
+      }
+
+      @include desktopFullHD {
+        & {
+          margin-right: 0;
         }
       }
     }

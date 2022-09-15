@@ -1,5 +1,12 @@
 .arrow {
   width: 5rem;
   height: 9.3rem;
+  @include flex-center;
   border: 0.1rem solid $color-lite;
+
+  img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
 }
