@@ -37,7 +37,7 @@
         letter-spacing: 0.5rem;
         -webkit-text-stroke: 0.15rem $color-gray;
         -webkit-text-fill-color: transparent;
-        text-align: left;
+        text-align: center;
 
         @include tabletPortrait {
           & {
@@ -55,7 +55,7 @@
 
       .hero-content-info-names-title {
         width: 100%;
-        padding: 0 2rem;
+        padding-left: 2.5rem;
         text-align: left;
         font-size: 9rem;
         z-index: 2;
@@ -68,11 +68,11 @@
           }
         }
 
-        @include tabletLandscape {
-          & {
-            border: 1px solid red;
-          }
-        }
+        // @include tabletLandscape {
+        //   & {
+        //     border: 1px solid red;
+        //   }
+        // }
 
         .hero-content-title-first {
           margin-bottom: -4rem;
@@ -90,7 +90,7 @@
         @include tabletLandscape {
           & {
             display: inline-block;
-            border: 1px solid red;
+            // border: 1px solid red;
           }
         }
 
