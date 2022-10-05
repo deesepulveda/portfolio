@@ -10,3 +10,16 @@
     object-fit: contain;
   }
 }
+
+.arrow-horizontal {
+  width: 9.3rem;
+  height: 5rem;
+  @include flex-center;
+  border: 0.1rem solid $color-lite;
+
+  img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+}

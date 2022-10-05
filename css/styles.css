@@ -471,7 +471,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 .contact-container .contact-wrapper .contact-box {
   width: 80%;
@@ -487,23 +486,43 @@ body {
 }
 .contact-container .contact-wrapper .contact-box form .user-box {
   width: 100%;
-  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid red;
+}
+.contact-container .contact-wrapper .contact-box form .user-box:not(:nth-child(3)) {
+  margin-bottom: 2rem;
+}
+.contact-container .contact-wrapper .contact-box form .user-box label {
+  width: 90%;
+  margin-bottom: 0.25rem;
+  text-align: left;
+  letter-spacing: 0.25rem;
+  font-size: 1.25rem;
 }
 .contact-container .contact-wrapper .contact-box form .user-box input {
-  width: 100%;
-  height: 3rem;
+  width: 90%;
+  height: 4rem;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
 }
-.contact-container .contact-wrapper .contact-box form .arrow-contact {
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+.contact-container .contact-wrapper .contact-box form .user-box textarea {
+  width: 90%;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+.contact-container .contact-wrapper .contact-box form .btn-arrow-box {
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contact-container .contact-wrapper .contact-box form .btn-arrow-box .arrow-contact {
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -511,7 +530,7 @@ body {
   -o-transition: 0.4s ease;
   cursor: pointer;
 }
-.contact-container .contact-wrapper .contact-box form .arrow-contact:hover {
+.contact-container .contact-wrapper .contact-box form .btn-arrow-box .arrow-contact:hover {
   background-color: #5c5858;
 }
 
@@ -530,6 +549,20 @@ section {
   border: 0.1rem solid rgb(255, 255, 255);
 }
 .arrow img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.arrow-horizontal {
+  width: 9.3rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+.arrow-horizontal img {
   width: 60%;
   height: 60%;
   object-fit: contain;
