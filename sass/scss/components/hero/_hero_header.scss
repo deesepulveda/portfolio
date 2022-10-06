@@ -62,7 +62,7 @@
           width: auto;
           flex-direction: row;
           justify-content: flex-end;
-          margin-right: 5rem;
+          margin-right: 3rem;
         }
       }
 
@@ -75,14 +75,21 @@
 
     .hero-nav-li {
       list-style-type: none;
+      padding: 1.5rem 2rem;
+      border: 0.1rem solid transparent;
+      @include transit4;
+
+      &:hover {
+        border: 0.1rem solid $color-lite;
+      }
 
       &:not(:last-child) {
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
 
         @include desktop {
           & {
             margin-bottom: 0;
-            margin-right: 7rem;
+            margin-right: 3rem;
           }
         }
 
@@ -111,11 +118,6 @@
             font-size: 2rem;
           }
         }
-
-        // &:hover {
-        //   padding: 1.5rem 2rem;
-        //   border: 0.1rem solid $color-lite;
-        // }
       }
     }
   }
