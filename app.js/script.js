@@ -5,6 +5,8 @@ const burger = document.querySelector(".hero-burger");
 const topLine = document.querySelector(".top-line");
 const bottomLine = document.querySelector(".bottom-line");
 const navLinks = document.querySelectorAll(".hero-nav-links");
+const projectBoxes = document.querySelectorAll(".projects-boxes");
+const bgGradientColor = document.querySelector(".bg-gradient-color");
 
 // Media Queries
 const mediaQueryDesktop = window.matchMedia("(min-width: 1280px)");
@@ -31,8 +33,13 @@ navLinks.forEach((l) => {
 window.addEventListener("scroll", () => {
   if (window.scrollY > 5 && mediaQueryDesktop.matches === true) {
     nav.classList.add("navBackground");
-    console.log("It is working");
   } else {
     nav.classList.remove("navBackground");
   }
+});
+
+projectBoxes.forEach((p) => {
+  p.addEventListener("mouseenter", () => {
+    bgGradientColor.classList.add("moveGradientBG");
+  });
 });

@@ -472,7 +472,174 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  border: 1px solid red;
+  overflow: hidden;
+}
+.projects-container .bg-gradient-color-box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+@media only screen and (min-width: 1280px) {
+  .projects-container .bg-gradient-color-box {
+    display: block;
+  }
+}
+.projects-container .bg-gradient-color-box .bg-gradient-color {
+  width: 100%;
+  height: 100%;
+  width: 70rem;
+  height: 70rem;
+  position: absolute;
+  bottom: -70%;
+  right: -70%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(16, 192, 16) 42%, rgb(3, 222, 230) 56%, rgba(0, 212, 255, 0) 100%);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.projects-container .bg-gradient-color-box .bg-box-pattern {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.projects-container .bg-gradient-color-box .bg-box-pattern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-container .bg-gradient-color-box .moveGradientBG {
+  animation: moveGradientColors 1000ms linear;
+  -webkit-animation: moveGradientColors 1000ms linear;
+}
+.projects-container .projects-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .projects-container .projects-wrapper {
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.projects-container .projects-wrapper .projects-boxes {
+  width: 28rem;
+  height: 23rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0rem -1rem 3rem 2rem rgb(5, 5, 5);
+}
+.projects-container .projects-wrapper .projects-boxes:not(:last-child) {
+  margin-bottom: -15rem;
+}
+@media only screen and (min-width: 1024px) {
+  .projects-container .projects-wrapper .projects-boxes:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: -30rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .projects-container .projects-wrapper .projects-boxes {
+    width: 40rem;
+    height: 27rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .projects-container .projects-wrapper .projects-boxes {
+    margin-bottom: 0;
+    box-shadow: -2rem 0rem 2rem rgb(5, 5, 5);
+  }
+}
+.projects-container .projects-wrapper .projects-boxes:nth-child(1) {
+  z-index: 1;
+}
+.projects-container .projects-wrapper .projects-boxes:nth-child(2) {
+  z-index: 2;
+}
+.projects-container .projects-wrapper .projects-boxes:nth-child(3) {
+  z-index: 3;
+}
+.projects-container .projects-wrapper .projects-boxes:nth-child(4) {
+  z-index: 4;
+}
+.projects-container .projects-wrapper .projects-boxes:nth-child(5) {
+  z-index: 5;
+}
+.projects-container .projects-wrapper .projects-boxes .projects-boxes-imgs {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.projects-container .projects-wrapper .projects-boxes:hover {
+  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+  -moz-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  -o-transform: translateY(-20%);
+}
+@media only screen and (min-width: 1024px) {
+  .projects-container .projects-wrapper .projects-boxes:hover {
+    transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    -moz-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    -o-transform: translateY(-30%);
+  }
+}
+
+@keyframes moveGradientColors {
+  from {
+    position: absolute;
+    bottom: -70%;
+    right: -70%;
+  }
+  to {
+    bottom: 100%;
+    right: 100%;
+  }
+}
+.about-container {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
 }
 
 .contact-container {
