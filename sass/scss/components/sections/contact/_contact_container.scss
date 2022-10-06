@@ -27,7 +27,9 @@
 
     .contact-box {
       width: 80%;
+      max-width: 75rem;
       height: 80%;
+      margin: 0 auto;
 
       @include tabletPortrait {
         & {
@@ -40,34 +42,72 @@
         @include flex-center-col;
 
         .user-box {
-          width: 100%;
+          width: 90%;
           @include flex-center-col;
 
           &:not(:nth-child(3)) {
             margin-bottom: 3rem;
           }
 
+          @include desktop {
+            & {
+              width: 80%;
+            }
+          }
+
           label {
-            width: 90%;
-            margin-bottom: 0.25rem;
+            width: 100%;
+            margin-bottom: 0.5rem;
             text-align: left;
             letter-spacing: 0.25rem;
             font-size: 1.25rem;
+
+            @include desktopFullHD {
+              & {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+              }
+            }
           }
 
           input {
-            width: 90%;
+            width: 100%;
             height: 4rem;
             color: $color-lite;
             background-color: transparent;
             border: 1px solid $color-lite;
+
+            @include desktopFullHD {
+              & {
+                height: 6rem;
+                font-size: 2rem;
+              }
+            }
+          }
+
+          .no-outline:focus {
+            outline: transparent;
+            border: 0.5px solid $color-cyan;
           }
 
           textarea {
-            width: 90%;
+            width: 100%;
             background-color: transparent;
             border: 1px solid $color-lite;
             color: $color-lite;
+
+            @include desktopFullHD {
+              & {
+                height: 20rem;
+                font-size: 1.75rem;
+              }
+            }
+
+            @include desktopUHD {
+              & {
+                height: 30rem;
+              }
+            }
           }
         }
 
@@ -76,6 +116,12 @@
           height: 10rem;
           @include flex-center;
           justify-content: flex-end;
+
+          @include desktop {
+            & {
+              width: 80%;
+            }
+          }
 
           .arrow-contact {
             @include transit4;

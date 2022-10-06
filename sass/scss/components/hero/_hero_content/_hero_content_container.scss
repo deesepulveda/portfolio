@@ -11,7 +11,7 @@
     width: 100%;
     max-width: 140rem;
     height: 50%;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     @include flex-center-col;
     // border: 1px solid blue;
 
@@ -68,12 +68,6 @@
           }
         }
 
-        // @include tabletLandscape {
-        //   & {
-        //     border: 1px solid red;
-        //   }
-        // }
-
         .hero-content-title-first {
           margin-bottom: -4rem;
         }
@@ -117,7 +111,7 @@
 
   .hero-content-scroll {
     width: 100%;
-    height: 20%;
+    height: 25%;
     @include flex-center;
   }
 }
