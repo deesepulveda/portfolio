@@ -40,6 +40,8 @@ window.addEventListener("scroll", () => {
 
 projectBoxes.forEach((p) => {
   p.addEventListener("mouseenter", (e) => {
-    if (e.target) bgGradientColor.classList.toggle("moveGradientBG");
+    if (e.target) {
+      bgGradientColor.classList.toggle("moveGradientBG");
+    }
   });
 });

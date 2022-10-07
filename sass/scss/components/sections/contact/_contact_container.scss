@@ -23,17 +23,47 @@
 
   .contact-wrapper {
     @include keep-it-hundo;
-    @include flex-center;
+    @include flex-center-col;
+    padding-top: 5rem;
+
+    .contact-title {
+      margin-bottom: 3rem;
+      padding: 1.5rem 2rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.25rem;
+      word-spacing: 1rem;
+      border: 0.1rem solid $color-lite;
+
+      @include desktopFullHD {
+        & {
+          font-size: 2rem;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
 
     .contact-box {
       width: 80%;
       max-width: 75rem;
-      height: 80%;
+      height: 70%;
       margin: 0 auto;
+      // border: 1px solid red;
 
       @include tabletPortrait {
         & {
           width: 60%;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          height: 60%;
         }
       }
 

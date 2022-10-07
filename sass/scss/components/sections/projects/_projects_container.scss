@@ -25,8 +25,8 @@
       background: linear-gradient(
         90deg,
         rgba(2, 0, 36, 0) 0%,
-        rgb(16, 34, 192) 42%,
-        rgb(11, 139, 245) 56%,
+        rgb(218, 4, 247) 42%,
+        rgb(247, 5, 126) 56%,
         rgba(0, 212, 255, 0) 100%
       );
       transform: rotate(45deg);
@@ -52,8 +52,8 @@
     }
 
     .moveGradientBG {
-      animation: moveGradientColors 1000ms linear;
-      -webkit-animation: moveGradientColors 1000ms linear;
+      animation: moveGradientColors 1500ms linear;
+      -webkit-animation: moveGradientColors 1500ms linear;
     }
   }
 
@@ -61,9 +61,8 @@
     @include keep-it-hundo;
     @include absol-center;
     @include flex-center-col;
-    padding-top: 5rem;
+    // padding-top: 5rem;
     position: relative;
-    // border: 1px solid red;
 
     @include tabletLandscape {
       & {
@@ -75,7 +74,7 @@
 
     .projects-boxes {
       width: 28rem;
-      height: 23rem;
+      height: 22rem;
       @include transit2;
       // overflow: hidden;
       position: relative;
@@ -98,8 +97,8 @@
         width: 0;
         height: 0;
         @include absol-topLeftZero;
-        border-left: 0px solid $color-cyan;
-        border-top: 0px solid $color-cyan;
+        border-left: 0px solid magenta;
+        border-top: 0px solid magenta;
         @include transit4;
       }
 
@@ -110,8 +109,8 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        border-right: 0px solid $color-cyan;
-        border-bottom: 0px solid $color-cyan;
+        border-right: 0px solid magenta;
+        border-bottom: 0px solid magenta;
         @include transit4;
       }
 
@@ -175,8 +174,8 @@
         -moz-transform: translateY(-20%);
         -ms-transform: translateY(-20%);
         -o-transform: translateY(-20%);
-        animation: delayedGlow 1s linear 0.5s infinite;
-        -webkit-animation: delayedGlow 1s linear 0.5s infinite;
+        animation: delayedGlow 900ms linear 400ms infinite;
+        -webkit-animation: delayedGlow 900ms linear 400ms infinite;
 
         @include tabletLandscape {
           & {
@@ -191,14 +190,14 @@
 
       &:hover::before {
         @include keep-it-hundo;
-        border-left: 1px solid $color-cyan;
-        border-top: 1px solid $color-cyan;
+        border-left: 1px solid magenta;
+        border-top: 1px solid magenta;
       }
 
       &:hover::after {
         @include keep-it-hundo;
-        border-right: 1px solid $color-cyan;
-        border-bottom: 1px solid $color-cyan;
+        border-right: 1px solid magenta;
+        border-bottom: 1px solid magenta;
       }
     }
   }
@@ -218,11 +217,11 @@
 }
 
 @keyframes delayedGlow {
-  to {
-    box-shadow: 0rem 0rem 0rem 0rem transparent;
+  from {
+    box-shadow: 0rem 0rem 2rem 0.5rem magenta;
   }
 
-  from {
-    box-shadow: 0rem 0rem 3rem 1rem $color-cyan;
+  to {
+    box-shadow: 0rem 0rem 0rem 0rem transparent;
   }
 }
