@@ -37,11 +37,3 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("navBackground");
   }
 });
-
-projectBoxes.forEach((p) => {
-  p.addEventListener("mouseenter", (e) => {
-    if (e.target) {
-      bgGradientColor.classList.toggle("moveGradientBG");
-    }
-  });
-});

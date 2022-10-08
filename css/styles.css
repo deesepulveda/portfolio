@@ -474,58 +474,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-.projects-container .bg-gradient-color-box {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -2;
-}
-@media only screen and (min-width: 1280px) {
-  .projects-container .bg-gradient-color-box {
-    display: block;
-  }
-}
-.projects-container .bg-gradient-color-box .bg-gradient-color {
-  width: 100%;
-  height: 100%;
-  width: 70rem;
-  height: 70rem;
-  position: absolute;
-  bottom: -70%;
-  right: -70%;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(218, 4, 247) 42%, rgb(247, 5, 126) 56%, rgba(0, 212, 255, 0) 100%);
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-}
-.projects-container .bg-gradient-color-box .bg-box-pattern {
-  width: 110%;
-  height: 110%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.projects-container .bg-gradient-color-box .bg-box-pattern img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.projects-container .bg-gradient-color-box .moveGradientBG {
-  animation: moveGradientColors 1500ms linear;
-  -webkit-animation: moveGradientColors 1500ms linear;
-}
 .projects-container .projects-wrapper {
   width: 100%;
   height: 100%;
@@ -542,6 +490,7 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-top: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   .projects-container .projects-wrapper {
@@ -578,8 +527,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-left: 0px solid magenta;
-  border-top: 0px solid magenta;
+  border-left: 0px solid cyan;
+  border-top: 0px solid cyan;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -593,8 +542,8 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  border-right: 0px solid magenta;
-  border-bottom: 0px solid magenta;
+  border-right: 0px solid cyan;
+  border-bottom: 0px solid cyan;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -671,14 +620,168 @@ body {
 .projects-container .projects-wrapper .projects-boxes:hover::before {
   width: 100%;
   height: 100%;
-  border-left: 1px solid magenta;
-  border-top: 1px solid magenta;
+  border-left: 1px solid cyan;
+  border-top: 1px solid cyan;
 }
 .projects-container .projects-wrapper .projects-boxes:hover::after {
   width: 100%;
   height: 100%;
-  border-right: 1px solid magenta;
-  border-bottom: 1px solid magenta;
+  border-right: 1px solid cyan;
+  border-bottom: 1px solid cyan;
+}
+
+@keyframes delayedGlow {
+  from {
+    box-shadow: 0rem 0rem 2rem 0.5rem cyan;
+  }
+  to {
+    box-shadow: 0rem 0rem 0rem 0rem transparent;
+  }
+}
+.about-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.about-container .bg-gradient-color-box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+@media only screen and (min-width: 1024px) {
+  .about-container .bg-gradient-color-box {
+    display: block;
+  }
+}
+.about-container .bg-gradient-color-box .bg-gradient-color {
+  width: 100%;
+  height: 100%;
+  width: 70rem;
+  height: 70rem;
+  position: absolute;
+  bottom: -70%;
+  right: -70%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(2, 201, 227) 42%, rgb(247, 5, 126) 56%, rgba(0, 212, 255, 0) 100%);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  animation: moveGradientColors 2000ms linear infinite;
+  -webkit-animation: moveGradientColors 2000ms linear infinite;
+}
+.about-container .bg-gradient-color-box .bg-box-pattern {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  bottom: -1%;
+  right: 0;
+}
+.about-container .bg-gradient-color-box .bg-box-pattern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-container .about-wrapper {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.about-container .about-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: rgb(5, 5, 5);
+  opacity: 0.7;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .about-container .about-wrapper {
+    width: 60rem;
+    height: 70%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about-container .about-wrapper {
+    width: 80rem;
+    height: 60%;
+  }
+}
+.about-container .about-wrapper .name-title {
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  font-size: 2rem;
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+@media only screen and (min-width: 768px) {
+  .about-container .about-wrapper .name-title {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about-container .about-wrapper .name-title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 3440px) {
+  .about-container .about-wrapper .name-title {
+    font-size: 4rem;
+  }
+}
+.about-container .about-wrapper .name-title h4 {
+  font-weight: 400;
+}
+.about-container .about-wrapper .about-content {
+  padding: 2rem 4rem;
+  font-size: 1.4rem;
+  text-transform: initial;
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: 2.5rem;
+}
+@media only screen and (min-width: 1920px) {
+  .about-container .about-wrapper .about-content {
+    padding: 2rem 8rem;
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 3440px) {
+  .about-container .about-wrapper .about-content {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 @keyframes moveGradientColors {
@@ -692,20 +795,6 @@ body {
     right: 100%;
   }
 }
-@keyframes delayedGlow {
-  from {
-    box-shadow: 0rem 0rem 2rem 0.5rem magenta;
-  }
-  to {
-    box-shadow: 0rem 0rem 0rem 0rem transparent;
-  }
-}
-.about-container {
-  width: 100%;
-  height: 100%;
-  border: 0.5px dotted magenta;
-}
-
 .contact-container {
   width: 100%;
   height: 100%;

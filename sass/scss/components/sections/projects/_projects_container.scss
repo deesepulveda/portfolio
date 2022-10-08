@@ -3,66 +3,12 @@
   position: relative;
   overflow: hidden;
 
-  .bg-gradient-color-box {
-    display: none;
-    @include keep-it-hundo;
-    @include absol-topLeftZero;
-    overflow: hidden;
-    z-index: -2;
-
-    @include desktop {
-      display: block;
-    }
-
-    .bg-gradient-color {
-      @include keep-it-hundo;
-      width: 70rem;
-      height: 70rem;
-      position: absolute;
-      bottom: -70%;
-      right: -70%;
-      background: rgb(2, 0, 36);
-      background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 0) 0%,
-        rgb(218, 4, 247) 42%,
-        rgb(247, 5, 126) 56%,
-        rgba(0, 212, 255, 0) 100%
-      );
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      @include transit3;
-      // z-index: -5;
-    }
-
-    .bg-box-pattern {
-      width: 110%;
-      height: 110%;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      img {
-        @include keep-it-hundo;
-        object-fit: cover;
-      }
-    }
-
-    .moveGradientBG {
-      animation: moveGradientColors 1500ms linear;
-      -webkit-animation: moveGradientColors 1500ms linear;
-    }
-  }
-
   .projects-wrapper {
     @include keep-it-hundo;
     @include absol-center;
     @include flex-center-col;
-    // padding-top: 5rem;
     position: relative;
+    margin-top: 2rem;
 
     @include tabletLandscape {
       & {
@@ -97,8 +43,8 @@
         width: 0;
         height: 0;
         @include absol-topLeftZero;
-        border-left: 0px solid magenta;
-        border-top: 0px solid magenta;
+        border-left: 0px solid $color-cyan;
+        border-top: 0px solid $color-cyan;
         @include transit4;
       }
 
@@ -109,8 +55,8 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        border-right: 0px solid magenta;
-        border-bottom: 0px solid magenta;
+        border-right: 0px solid $color-cyan;
+        border-bottom: 0px solid $color-cyan;
         @include transit4;
       }
 
@@ -190,35 +136,22 @@
 
       &:hover::before {
         @include keep-it-hundo;
-        border-left: 1px solid magenta;
-        border-top: 1px solid magenta;
+        border-left: 1px solid $color-cyan;
+        border-top: 1px solid $color-cyan;
       }
 
       &:hover::after {
         @include keep-it-hundo;
-        border-right: 1px solid magenta;
-        border-bottom: 1px solid magenta;
+        border-right: 1px solid $color-cyan;
+        border-bottom: 1px solid $color-cyan;
       }
     }
   }
 }
 
-@keyframes moveGradientColors {
-  from {
-    position: absolute;
-    bottom: -70%;
-    right: -70%;
-  }
-
-  to {
-    bottom: 100%;
-    right: 100%;
-  }
-}
-
 @keyframes delayedGlow {
   from {
-    box-shadow: 0rem 0rem 2rem 0.5rem magenta;
+    box-shadow: 0rem 0rem 2rem 0.5rem $color-cyan;
   }
 
   to {
