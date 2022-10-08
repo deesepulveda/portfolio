@@ -574,6 +574,12 @@ body {
     height: 42rem;
   }
 }
+@media only screen and (min-width: 3840px) {
+  .projects-container .projects-wrapper .projects-boxes {
+    width: 65rem;
+    height: 50rem;
+  }
+}
 .projects-container .projects-wrapper .projects-boxes:nth-child(1) {
   z-index: 1;
 }
@@ -653,7 +659,7 @@ body {
   overflow: hidden;
   z-index: -2;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1280px) {
   .about-container .bg-gradient-color-box {
     display: block;
   }
@@ -695,7 +701,8 @@ body {
 }
 .about-container .about-wrapper {
   width: 100%;
-  height: 80%;
+  height: auto;
+  padding-top: 5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -729,13 +736,16 @@ body {
 @media only screen and (min-width: 768px) {
   .about-container .about-wrapper {
     width: 60rem;
-    height: 70%;
   }
 }
 @media only screen and (min-width: 1920px) {
   .about-container .about-wrapper {
     width: 80rem;
-    height: 60%;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .about-container .about-wrapper {
+    width: 100rem;
   }
 }
 .about-container .about-wrapper .name-title {
@@ -763,25 +773,86 @@ body {
 .about-container .about-wrapper .name-title h4 {
   font-weight: 400;
 }
-.about-container .about-wrapper .about-content {
+.about-container .about-wrapper .about-content-wrapper {
+  width: 100%;
+  height: auto;
   padding: 2rem 4rem;
+}
+@media only screen and (min-width: 1920px) {
+  .about-container .about-wrapper .about-content-wrapper {
+    padding: 2rem 8rem;
+  }
+}
+.about-container .about-wrapper .about-content-wrapper .about-content {
+  margin-bottom: 4rem;
   font-size: 1.4rem;
   text-transform: initial;
   text-align: justify;
   text-indent: 2rem;
   line-height: 2.5rem;
 }
+@media only screen and (min-width: 768px) {
+  .about-container .about-wrapper .about-content-wrapper .about-content {
+    margin-bottom: 6rem;
+  }
+}
 @media only screen and (min-width: 1920px) {
-  .about-container .about-wrapper .about-content {
+  .about-container .about-wrapper .about-content-wrapper .about-content {
     padding: 2rem 8rem;
     font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 3440px) {
-  .about-container .about-wrapper .about-content {
+  .about-container .about-wrapper .about-content-wrapper .about-content {
     font-size: 2.5rem;
     line-height: 3.5rem;
   }
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons {
+  font-size: 3rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons:not(:last-child) {
+  margin-right: 2rem;
+}
+@media only screen and (min-width: 1280px) {
+  .about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons:hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+@media only screen and (min-width: 3840px) {
+  .about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons {
+    font-size: 4rem;
+  }
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons .icons-link {
+  color: #767373;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.about-container .about-wrapper .about-content-wrapper .social-icon-wrapper .icons .icons-link:hover {
+  color: rgb(255, 255, 255);
 }
 
 @keyframes moveGradientColors {
@@ -865,6 +936,11 @@ body {
 @media only screen and (min-width: 2560px) {
   .contact-container .contact-wrapper .contact-box {
     height: 60%;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .contact-container .contact-wrapper .contact-box {
+    max-width: 100rem;
   }
 }
 .contact-container .contact-wrapper .contact-box form {
@@ -959,7 +1035,7 @@ body {
   cursor: pointer;
 }
 .contact-container .contact-wrapper .contact-box form .btn-arrow-box .arrow-contact:hover {
-  background-color: #5c5858;
+  background-color: #767373;
 }
 
 section {

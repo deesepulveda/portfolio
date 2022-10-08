@@ -67,6 +67,12 @@
         }
       }
 
+      @include desktopUHD {
+        & {
+          max-width: 100rem;
+        }
+      }
+
       form {
         @include keep-it-hundo;
         @include flex-center-col;

@@ -9,7 +9,7 @@
     overflow: hidden;
     z-index: -2;
 
-    @include tabletLandscape {
+    @include desktop {
       display: block;
     }
 
@@ -54,7 +54,8 @@
 
   .about-wrapper {
     width: 100%;
-    height: 80%;
+    height: auto;
+    padding-top: 5rem;
     @include absol-center;
     @include flex-center-col;
     position: relative;
@@ -72,14 +73,20 @@
     @include tabletPortrait {
       & {
         width: 60rem;
-        height: 70%;
+        // height: 70%;
       }
     }
 
     @include desktopFullHD {
       & {
         width: 80rem;
-        height: 60%;
+        // height: 60%;
+      }
+    }
+
+    @include desktopUHD {
+      & {
+        width: 100rem;
       }
     }
 
@@ -113,25 +120,86 @@
       }
     }
 
-    .about-content {
+    .about-content-wrapper {
+      width: 100%;
+      height: auto;
       padding: 2rem 4rem;
-      font-size: 1.4rem;
-      text-transform: initial;
-      text-align: justify;
-      text-indent: 2rem;
-      line-height: 2.5rem;
+      // border: 1px solid green;
 
       @include desktopFullHD {
         & {
           padding: 2rem 8rem;
-          font-size: 1.75rem;
         }
       }
 
-      @include desktopUltraWide {
-        & {
-          font-size: 2.5rem;
-          line-height: 3.5rem;
+      .about-content {
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
+        text-transform: initial;
+        text-align: justify;
+        text-indent: 2rem;
+        line-height: 2.5rem;
+
+        @include tabletPortrait {
+          & {
+            margin-bottom: 6rem;
+          }
+        }
+
+        @include desktopFullHD {
+          & {
+            padding: 2rem 8rem;
+            font-size: 1.75rem;
+          }
+        }
+
+        @include desktopUltraWide {
+          & {
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+
+      .social-icon-wrapper {
+        width: 100%;
+        height: auto;
+        @include flex-center;
+
+        .icons {
+          font-size: 3rem;
+          @include transit3;
+
+          &:not(:last-child) {
+            margin-right: 2rem;
+
+            @include desktop {
+              & {
+                margin-right: 3rem;
+              }
+            }
+          }
+
+          &:hover {
+            transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+          }
+
+          @include desktopUHD {
+            font-size: 4rem;
+          }
+
+          .icons-link {
+            color: $color-gray-lite;
+            @include transit3;
+
+            &:hover {
+              color: $color-lite;
+            }
+          }
         }
       }
     }

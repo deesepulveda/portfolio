@@ -88,6 +88,13 @@
         }
       }
 
+      @include desktopUHD {
+        & {
+          width: 65rem;
+          height: 50rem;
+        }
+      }
+
       &:nth-child(1) {
         z-index: 1;
       }
