@@ -473,24 +473,21 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+  background-color: rgb(5, 5, 5);
 }
 .projects-container .projects-wrapper {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
   margin-top: 2rem;
+  z-index: 5;
 }
 @media only screen and (min-width: 1024px) {
   .projects-container .projects-wrapper {
@@ -502,11 +499,12 @@ body {
 .projects-container .projects-wrapper .projects-boxes {
   width: 28rem;
   height: 22rem;
-  transition: 0.2s ease;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  -ms-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  overflow: hidden;
   position: relative;
   cursor: pointer;
   box-shadow: 0rem -1rem 3rem 2rem rgb(5, 5, 5);
@@ -611,8 +609,8 @@ body {
   -moz-transform: translateY(-20%);
   -ms-transform: translateY(-20%);
   -o-transform: translateY(-20%);
-  animation: delayedGlow 900ms linear 400ms infinite;
-  -webkit-animation: delayedGlow 900ms linear 400ms infinite;
+  animation: delayedGlow 800ms linear 400ms infinite;
+  -webkit-animation: delayedGlow 800ms linear 400ms infinite;
 }
 @media only screen and (min-width: 1024px) {
   .projects-container .projects-wrapper .projects-boxes:hover {
@@ -634,6 +632,90 @@ body {
   height: 100%;
   border-right: 1px solid cyan;
   border-bottom: 1px solid cyan;
+}
+.projects-container .project-bg-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  z-index: 100;
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+}
+.projects-container .project-bg-overlay::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(5, 5, 5);
+  opacity: 0.8;
+  z-index: -1;
+}
+.projects-container .project-bg-overlay .overlay-close {
+  width: 6rem;
+  height: 5rem;
+  position: relative;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  z-index: 105;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  .projects-container .project-bg-overlay .overlay-close {
+    right: 3%;
+  }
+}
+.projects-container .project-bg-overlay .overlay-close .top-line,
+.projects-container .project-bg-overlay .overlay-close .bottom-line {
+  height: 0.2rem;
+  width: 3.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+.projects-container .project-bg-overlay .overlay-close .top-line {
+  transform: translate(-50%, -50%) rotate(-225deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-225deg);
+  -moz-transform: translate(-50%, -50%) rotate(-225deg);
+  -ms-transform: translate(-50%, -50%) rotate(-225deg);
+  -o-transform: translate(-50%, -50%) rotate(-225deg);
+}
+.projects-container .project-bg-overlay .overlay-close .bottom-line {
+  transform: translate(-50%, -50%) rotate(225deg);
+  -webkit-transform: translate(-50%, -50%) rotate(225deg);
+  -moz-transform: translate(-50%, -50%) rotate(225deg);
+  -ms-transform: translate(-50%, -50%) rotate(225deg);
+  -o-transform: translate(-50%, -50%) rotate(225deg);
+}
+.projects-container .moveRight {
+  transform: translateX(0vw);
+  -webkit-transform: translateX(0vw);
+  -moz-transform: translateX(0vw);
+  -ms-transform: translateX(0vw);
+  -o-transform: translateX(0vw);
 }
 
 @keyframes delayedGlow {
@@ -665,6 +747,7 @@ body {
   }
 }
 .about-container .bg-gradient-color-box .bg-gradient-color {
+  display: none;
   width: 100%;
   height: 100%;
   width: 70rem;
@@ -780,7 +863,7 @@ body {
 }
 @media only screen and (min-width: 1920px) {
   .about-container .about-wrapper .about-content-wrapper {
-    padding: 2rem 8rem;
+    padding: 4rem 8rem;
   }
 }
 .about-container .about-wrapper .about-content-wrapper .about-content {
@@ -798,7 +881,6 @@ body {
 }
 @media only screen and (min-width: 1920px) {
   .about-container .about-wrapper .about-content-wrapper .about-content {
-    padding: 2rem 8rem;
     font-size: 1.75rem;
   }
 }
@@ -1046,7 +1128,6 @@ section {
 .tech-container {
   width: 100%;
   height: 100%;
-  border: 0.5px dotted magenta;
 }
 
 .arrow {

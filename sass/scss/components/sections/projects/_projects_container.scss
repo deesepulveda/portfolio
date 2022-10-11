@@ -2,13 +2,34 @@
   @include keep-it-hundo;
   position: relative;
   overflow: hidden;
+  background-color: $color-dark;
+
+  // .bg-overlay {
+  //   @include keep-it-hundo;
+  //   @include absol-topLeftZero;
+  //   position: relative;
+  //   overflow: hidden;
+  //   z-index: -2;
+
+  //   .bg-overlay-image-box {
+  //     @include keep-it-hundo;
+  //     @include absol-topLeftZero;
+  //     z-index: -1;
+
+  //     img {
+  //       @include keep-it-hundo;
+  //       object-fit: cover;
+  //     }
+  //   }
+  // }
 
   .projects-wrapper {
     @include keep-it-hundo;
-    @include absol-center;
+    @include absol-topLeftZero;
     @include flex-center-col;
     position: relative;
     margin-top: 2rem;
+    z-index: 5;
 
     @include tabletLandscape {
       & {
@@ -21,8 +42,8 @@
     .projects-boxes {
       width: 28rem;
       height: 22rem;
-      @include transit2;
-      // overflow: hidden;
+      @include transit3;
+      overflow: hidden;
       position: relative;
       cursor: pointer;
       box-shadow: 0rem -1rem 3rem 2rem $color-dark;
@@ -127,8 +148,8 @@
         -moz-transform: translateY(-20%);
         -ms-transform: translateY(-20%);
         -o-transform: translateY(-20%);
-        animation: delayedGlow 900ms linear 400ms infinite;
-        -webkit-animation: delayedGlow 900ms linear 400ms infinite;
+        animation: delayedGlow 800ms linear 400ms infinite;
+        -webkit-animation: delayedGlow 800ms linear 400ms infinite;
 
         @include tabletLandscape {
           & {
@@ -154,7 +175,88 @@
       }
     }
   }
+
+  .project-bg-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    position: fixed;
+    top: 0;
+    @include transit3;
+    z-index: 100;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+
+    &::after {
+      content: "";
+      @include keep-it-hundo;
+      @include absol-topLeftZero;
+      background-color: $color-dark;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .overlay-close {
+      width: 6rem;
+      height: 5rem;
+      position: relative;
+      position: absolute;
+      top: 2%;
+      right: 5%;
+      @include transit3;
+      z-index: 105;
+      cursor: pointer;
+
+      @include tabletLandscape {
+        & {
+          right: 3%;
+        }
+      }
+
+      .top-line,
+      .bottom-line {
+        height: 0.2rem;
+        width: 3.3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: $color-lite;
+        @include transit4;
+      }
+
+      .top-line {
+        transform: translate(-50%, -50%) rotate(-225deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-225deg);
+        -moz-transform: translate(-50%, -50%) rotate(-225deg);
+        -ms-transform: translate(-50%, -50%) rotate(-225deg);
+        -o-transform: translate(-50%, -50%) rotate(-225deg);
+      }
+
+      .bottom-line {
+        transform: translate(-50%, -50%) rotate(225deg);
+        -webkit-transform: translate(-50%, -50%) rotate(225deg);
+        -moz-transform: translate(-50%, -50%) rotate(225deg);
+        -ms-transform: translate(-50%, -50%) rotate(225deg);
+        -o-transform: translate(-50%, -50%) rotate(225deg);
+      }
+    }
+  }
+
+  .moveRight {
+    transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
+    -moz-transform: translateX(0vw);
+    -ms-transform: translateX(0vw);
+    -o-transform: translateX(0vw);
+  }
 }
+
+// JAVASCRIPT CLASS TRIGGER
+
+// KEYFRAMES FOR ANIMATIONS
 
 @keyframes delayedGlow {
   from {

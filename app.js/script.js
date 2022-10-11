@@ -7,6 +7,10 @@ const bottomLine = document.querySelector(".bottom-line");
 const navLinks = document.querySelectorAll(".hero-nav-links");
 const projectBoxes = document.querySelectorAll(".projects-boxes");
 const bgGradientColor = document.querySelector(".bg-gradient-color");
+const bgOverlayImg = document.querySelector(".bg-overlay-img");
+const bgOverlayBox = document.querySelector(".bg-overlay-image-box");
+const overlayClose = document.querySelector(".overlay-close");
+const projectBoxOverlay = document.querySelector(".project-bg-overlay");
 
 // Media Queries
 const mediaQueryDesktop = window.matchMedia("(min-width: 1280px)");
@@ -30,6 +34,7 @@ navLinks.forEach((l) => {
   });
 });
 
+// Nav BG Change after scrolling
 window.addEventListener("scroll", () => {
   if (window.scrollY > 5 && mediaQueryDesktop.matches === true) {
     nav.classList.add("navBackground");
@@ -37,3 +42,24 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("navBackground");
   }
 });
+
+// Open Projects Modal Overlay BG
+projectBoxes.forEach((pb) => {
+  pb.addEventListener("click", () => {
+    projectBoxOverlay.classList.add("moveRight");
+  });
+});
+
+// Close Projects Modal Overlay BG
+overlayClose.addEventListener("click", () => {
+  projectBoxOverlay.classList.remove("moveRight");
+});
+
+// projectBoxes.forEach((pb) => {
+//   pb.addEventListener("mouseenter", (e) => {
+//     // console.log(e.target.children[0].src);
+//     let currentImage = e.target.children[0].src;
+//     const newImageSrc = currentImage;
+//     bgOverlayImg.src = newImageSrc;
+//   });
+// });

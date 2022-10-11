@@ -14,6 +14,7 @@
     }
 
     .bg-gradient-color {
+      display: none;
       @include keep-it-hundo;
       width: 70rem;
       height: 70rem;
@@ -128,7 +129,7 @@
 
       @include desktopFullHD {
         & {
-          padding: 2rem 8rem;
+          padding: 4rem 8rem;
         }
       }
 
@@ -148,7 +149,6 @@
 
         @include desktopFullHD {
           & {
-            padding: 2rem 8rem;
             font-size: 1.75rem;
           }
         }
